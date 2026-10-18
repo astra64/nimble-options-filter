@@ -10,8 +10,8 @@
   ],
   "license": "LICENSE",
   "url": "https://github.com/astra64/nimble-options-filter",
-  "manifest": "https://github.com/astra64/nimble-options-filter/releases/latest/download/module.json",
-  "download": "https://github.com/astra64/nimble-options-filter/releases/latest/download/module.zip",
+  "manifest": "https://raw.githubusercontent.com/astra64/nimble-options-filter/main/module.json",
+  "download": "https://github.com/astra64/nimble-options-filter/archive/refs/heads/main.zip",
   "esmodules": [
     "scripts/main.js"
   ],
