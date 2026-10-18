@@ -1,0 +1,42 @@
+{
+  "NOF": {
+    "Settings": {
+      "Menu": {
+        "Name": "Hidden Character Options",
+        "Label": "Choose Hidden Options",
+        "Hint": "Pick which classes, ancestries, ancestry bonuses and backgrounds are hidden from the Nimble character creation dialog."
+      }
+    },
+    "Manager": {
+      "Title": "Nimble Options Filter",
+      "Tabs": {
+        "Classes": "Classes",
+        "Ancestries": "Ancestries",
+        "AncestryBonuses": "Ancestry Bonuses",
+        "Backgrounds": "Backgrounds"
+      },
+      "Sections": {
+        "Common": "Common options",
+        "Exotic": "Exotic options"
+      },
+      "Total": "Total",
+      "Hidden": "Hidden",
+      "Visible": "Visible",
+      "Unsaved": "Status: unsaved changes",
+      "Search": "Search options...",
+      "HiddenOnly": "Show hidden only",
+      "ResetDefault": "Reset to default",
+      "ResetDefaultHint": "Show all common options and hide exotic ones (this tab only).",
+      "Hide": "Hide",
+      "Exotic": "exotic",
+      "BlockedNote": "hidden because its default bonus is hidden",
+      "AllHiddenWarning": "Every option in this tab is hidden. Unhide at least one option to save.",
+      "CannotSave": "Cannot save: every option in a tab is hidden.",
+      "Changes": "Changes since last save: +{hidden} hidden, -{shown} hidden",
+      "NoChanges": "No changes since last save",
+      "Revert": "Revert",
+      "Save": "Save",
+      "Saved": "Hidden options saved."
+    }
+  }
+}

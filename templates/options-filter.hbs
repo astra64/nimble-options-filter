@@ -1,0 +1,59 @@
+<div class="nof-root">
+  <header class="nof-header">
+    <div class="nof-chips">
+      <span class="nof-chip">{{localize "NOF.Manager.Total"}} <b data-chip="total">0</b></span>
+      <span class="nof-chip">{{localize "NOF.Manager.Hidden"}} <b data-chip="hidden">0</b></span>
+      <span class="nof-chip">{{localize "NOF.Manager.Visible"}} <b data-chip="visible">0</b></span>
+      <span class="nof-chip nof-status" hidden>{{localize "NOF.Manager.Unsaved"}}</span>
+    </div>
+    <div class="nof-tools">
+      <input type="search" class="nof-search" placeholder="{{localize 'NOF.Manager.Search'}}">
+      <label class="nof-toggle"><input type="checkbox" class="nof-hidden-only"> {{localize "NOF.Manager.HiddenOnly"}}</label>
+    </div>
+  </header>
+
+  <nav class="nof-tabs">
+    {{#each tabs}}
+    <a class="nof-tab {{#if active}}active{{/if}}" data-action="switchTab" data-tab="{{id}}">
+      {{localize label}} <span class="nof-badge" data-badge="{{id}}">0</span>
+    </a>
+    {{/each}}
+  </nav>
+
+  <div class="nof-panels">
+    {{#each tabs}}
+    <section class="nof-panel {{#if active}}active{{/if}}" data-tab="{{id}}">
+      <div class="nof-bulk">
+        <button type="button" data-action="resetDefault" data-tooltip="NOF.Manager.ResetDefaultHint">
+          <i class="fa-solid fa-rotate-left"></i> {{localize "NOF.Manager.ResetDefault"}}
+        </button>
+      </div>
+      <p class="nof-warn" data-tab="{{id}}" hidden><i class="fa-solid fa-triangle-exclamation"></i> {{localize "NOF.Manager.AllHiddenWarning"}}</p>
+      {{#each sections}}
+      <div class="nof-group">
+        {{#if heading}}<h3>{{localize heading}}</h3>{{/if}}
+        <ul>
+          {{#each rows}}
+          <li class="nof-row" data-name="{{lcname}}" data-exotic="{{exotic}}" data-default-bonus="{{defaultBonus}}">
+            <label title="{{uuid}}">
+              <img src="{{img}}" alt="" loading="lazy">
+              <span class="nof-name">{{name}}{{#if exotic}} <em class="nof-tag">{{localize "NOF.Manager.Exotic"}}</em>{{/if}} <em class="nof-tag nof-blocked-note" hidden>{{localize "NOF.Manager.BlockedNote"}}</em></span>
+              <span class="nof-meta">{{source}}</span>
+              <input type="checkbox" class="nof-check" data-category="{{category}}" data-uuid="{{uuid}}" {{#if hidden}}checked{{/if}}>
+              <span class="nof-hide-label">{{localize "NOF.Manager.Hide"}}</span>
+            </label>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/each}}
+    </section>
+    {{/each}}
+  </div>
+
+  <footer class="nof-footer">
+    <span class="nof-changes"></span>
+    <button type="button" data-action="revert"><i class="fa-solid fa-rotate-left"></i> {{localize "NOF.Manager.Revert"}}</button>
+    <button type="button" data-action="save" class="nof-save"><i class="fa-solid fa-floppy-disk"></i> {{localize "NOF.Manager.Save"}}</button>
+  </footer>
+</div>
